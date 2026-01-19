@@ -133,8 +133,6 @@ Performance optimization
 
 Extended visualization features
 
-📄 License
-MIT License - see LICENSE file for details.
 
 中文
 🎮 项目概述
@@ -265,5 +263,3 @@ R键：重启下一代（进化）
 
 扩展可视化功能
 
-📄 许可证
-MIT 许可证 - 详见 LICENSE 文件。
