@@ -1,0 +1,418 @@
+# Gene Expression Decision Algorithm (GEDA) - Principles & Implementation
+# 基因表达决策算法 - 原理与实现
+
+## Core Principles | 核心原理
+
+### 1. Five-Base Genetic System | 五进制碱基系统
+
+**English Version:**
+The GEDA system employs a novel five-base genetic encoding scheme, each representing distinct behavioral tendencies:
+
+- **A (Aggressive Action)**: Represents proactive, risk-taking behavior focused on immediate gains and food-seeking
+- **G (Stable Operation)**: Represents safe, pattern-maintaining behavior for consistent operation
+- **C (Conservative Strategy)**: Represents cautious, risk-avoiding behavior for safety preservation
+- **T (Flexible Adjustment)**: Represents adaptive, switching behavior for environmental changes
+- **X (Mutational Exploration)**: Represents creative, random exploration for breakthrough strategies
+
+**Key Features:**
+- **Complementary Pairing**: A↔T, G↔C, X↔X (self-pairing mechanism)
+- **Double-Strand Structure**: Each gene consists of complementary strands forming a decision "cipher" system
+- **Dynamic Dominance**: Environmental pressure determines which strand becomes dominant
+
+**中文版本:**
+GEDA系统采用新颖的五进制遗传编码方案，每种碱基代表不同的行为倾向：
+
+- **A (激进行动)**: 代表积极、冒险的行为，专注于即时收益和食物寻找
+- **G (稳定操作)**: 代表安全、模式维持的行为，确保操作一致性
+- **C (保守策略)**: 代表谨慎、规避风险的行为，保持安全
+- **T (灵活调整)**: 代表适应性、切换行为，应对环境变化
+- **X (突变探索)**: 代表创造性、随机探索，寻求突破性策略
+
+**关键特性:**
+- **互补配对**: A↔T, G↔C, X↔X (自我配对机制)
+- **双链结构**: 每个基因由互补链组成，形成决策"暗号"系统
+- **动态显性**: 环境压力决定哪条链成为显性链
+
+### 2. Gene Expression Mechanism | 基因表达机制
+
+**English Version:**
+
+The gene expression process follows this workflow:
+
+1. **Environmental Input**: Receive current state information from the environment
+2. **Pressure Calculation**: Compute environmental pressure value (0.0-1.0)
+3. **Dominant Strand Selection**: 
+   - High pressure (>0.7): Activate aggressive strand (A/G bases dominant)
+   - Low pressure (<0.3): Activate conservative strand (C/T bases dominant)
+   - Medium pressure (0.3-0.7): Balanced strand activation
+4. **Base Sequence Reading**: Read the selected strand's base sequence
+5. **Complementary Verification**: Validate decision consistency through pairing
+6. **Action Mapping**: Map verified sequence to executable actions
+7. **Execution & Feedback**: Execute actions and collect environmental feedback
+8. **Memory Update**: Update memory databases with learning outcomes
+
+**Expression Logic:**
+- High pressure environments favor aggressive/stable genes for immediate response
+- Low pressure environments favor conservative/flexible genes for safe operation
+- X-bases introduce exploration regardless of pressure level
+
+**中文版本:**
+
+基因表达过程遵循以下工作流程：
+
+1. **环境输入**: 从环境接收当前状态信息
+2. **压力计算**: 计算环境压力值(0.0-1.0)
+3. **显性链选择**:
+   - 高压(>0.7): 激活激进链(A/G碱基显性)
+   - 低压(<0.3): 激活保守链(C/T碱基显性)
+   - 中压(0.3-0.7): 平衡链激活
+4. **碱基序列读取**: 读取所选链的碱基序列
+5. **互补验证**: 通过配对验证决策一致性
+6. **动作映射**: 将验证序列映射为可执行动作
+7. **执行与反馈**: 执行动作并收集环境反馈
+8. **记忆更新**: 用学习结果更新记忆数据库
+
+**表达逻辑:**
+- 高压环境偏好激进/稳定基因以快速响应
+- 低压环境偏好保守/灵活基因以确保安全操作
+- X碱基无论压力水平如何都引入探索行为
+
+### 3. Mutation & Evolution | 变异与进化
+
+**English Version:**
+
+GEDA incorporates five mutation types simulating biological evolution:
+
+1. **Insertion Mutation**: Adds 1-5 new bases randomly into the gene chain
+2. **Replacement Mutation**: Replaces existing bases with new ones
+3. **Deletion Mutation**: Removes bases from the gene chain
+4. **Reordering Mutation**: Shuffles the order of bases within segments
+5. **Complementary Mutation**: Switches bases with their complements (A↔T, G↔C)
+
+**Evolutionary Characteristics:**
+- **Memory Isolation**: New and old gene segments maintain separate memory databases
+- **Natural Growth**: Gene chain length increases naturally over time
+- **Evolutionary Strata**: Older segments form "fossil records" of past strategies
+- **No Memory Pollution**: Segmented memory prevents cross-contamination
+
+**中文版本:**
+
+GEDA包含五种模拟生物进化的变异类型：
+
+1. **插入变异**: 向基因链中随机插入1-5个新碱基
+2. **替换变异**: 用新碱基替换现有碱基
+3. **删除变异**: 从基因链中移除碱基
+4. **重排变异**: 打乱基因段内碱基的顺序
+5. **互补变异**: 将碱基与其互补碱基交换(A↔T, G↔C)
+
+**进化特性:**
+- **记忆隔离**: 新旧基因段保持独立的记忆数据库
+- **自然生长**: 基因链长度随时间自然增长
+- **进化地层**: 老基因段形成过去策略的"化石记录"
+- **无记忆污染**: 分段记忆防止交叉污染
+
+## Intelligence Mechanisms | 智能机制
+
+### 1. Contextual Recognition Intelligence | 情境识别智能
+
+**English Version:**
+
+The system demonstrates contextual intelligence through:
+
+**Feature Extraction Process:**
+1. Extract multi-dimensional environmental features
+2. Activate relevant gene segments based on feature matching
+3. Query historical success rates for each segment
+4. Generate confidence scores combining matching and history
+5. Select expression scheme with highest confidence
+
+**Feature Dimensions:**
+- Food proximity and direction
+- Obstacle density and distribution
+- Available space and movement freedom
+- Historical decision success patterns
+- Current environmental pressure level
+
+**中文版本:**
+
+系统通过以下方式展现情境识别智能：
+
+**特征提取过程:**
+1. 提取多维环境特征
+2. 基于特征匹配激活相关基因段
+3. 查询每个基因段的历史成功率
+4. 生成结合匹配度和历史的置信度分数
+5. 选择置信度最高的表达方案
+
+**特征维度:**
+- 食物接近度和方向
+- 障碍物密度和分布
+- 可用空间和移动自由度
+- 历史决策成功模式
+- 当前环境压力水平
+
+### 2. Progressive Learning Ability | 渐进学习能力
+
+**English Version:**
+
+The system learns progressively through three mechanisms:
+
+**Success Reinforcement:**
+- Effective decisions increase expression frequency
+- Related gene segments activate collaboratively
+- Success patterns become more dominant over time
+
+**Failure Silencing (Methylation Analogy):**
+- Unsuccessful decisions receive methylation markers
+- Marked segments are temporarily suppressed
+- Genetic information remains preserved for potential reactivation
+
+**Mutational Innovation:**
+- X-bases introduce random exploration
+- May discover novel, successful strategies
+- Provides escape from local optima
+
+**中文版本:**
+
+系统通过三种机制进行渐进学习：
+
+**成功强化:**
+- 有效决策增加表达频率
+- 相关基因段协同激活
+- 成功模式随时间变得更加显性
+
+**失败沉默(甲基化类比):**
+- 不成功决策接收甲基化标记
+- 标记的基因段被暂时抑制
+- 遗传信息保留以备潜在重新激活
+
+**突变创新:**
+- X碱基引入随机探索
+- 可能发现新颖的成功策略
+- 提供逃离局部最优的途径
+
+### 3. Adaptive Evolution | 适应性进化
+
+**English Version:**
+
+GEDA exhibits adaptive evolution through:
+
+**Environmental Adaptation:**
+- Gene expression weights adjust dynamically with environmental changes
+- Pressure-responsive switching between aggressive and conservative modes
+- Gradual optimization of decision patterns for current conditions
+
+**Strategy Accumulation:**
+- Successful strategies solidify into stable gene segments
+- Multiple successful patterns coexist in the gene chain
+- Historical strategies remain available for reactivation
+
+**Mutation Potential:**
+- Structural reorganization may produce intelligence leaps
+- X-bases provide continuous exploration capability
+- Balanced mutation rate maintains adaptability without instability
+
+**中文版本:**
+
+GEDA通过以下方式展现适应性进化：
+
+**环境适应:**
+- 基因表达权重随环境变化动态调整
+- 压力响应式在激进和保守模式间切换
+- 针对当前条件逐步优化决策模式
+
+**策略积累:**
+- 成功策略固化为稳定的基因段
+- 多个成功模式在基因链中共存
+- 历史策略保持可重新激活状态
+
+**突变潜力:**
+- 结构重组可能产生智能跃迁
+- X碱基提供持续的探索能力
+- 平衡的突变率保持适应性而不失稳定性
+
+## Implementation Design | 实现设计
+
+### 1. Lightweight Architecture | 轻量级架构
+
+**English Version:**
+
+Core implementation structure:
+
+```
+class GEDAAgent:
+    def __init__(self):
+        self.gene_chain = []          # Genetic chain storage
+        self.memory_dbs = {}          # Segmented memory databases
+        self.expression_cache = {}    # Expression result caching
+        self.environment_history = deque(maxlen=100)  # Recent environment records
+    
+    def perceive_and_act(self, state):
+        # 1. Extract environmental feature vector
+        features = extract_features(state)
+        
+        # 2. Activate matching gene segments
+        active_segments = self.activate_segments(features)
+        
+        # 3. Generate decision action
+        action = self.express_decision(active_segments, features)
+        
+        # 4. Execute and learn
+        result = self.execute_and_learn(action, state)
+        
+        return action, result
+```
+
+**中文版本:**
+
+核心实现结构：
+
+```
+class GEDAAgent:
+    def __init__(self):
+        self.gene_chain = []          # 基因链存储
+        self.memory_dbs = {}          # 分段记忆数据库
+        self.expression_cache = {}    # 表达结果缓存
+        self.environment_history = deque(maxlen=100)  # 近期环境记录
+    
+    def perceive_and_act(self, state):
+        # 1. 提取环境特征向量
+        features = extract_features(state)
+        
+        # 2. 激活匹配基因段
+        active_segments = self.activate_segments(features)
+        
+        # 3. 生成决策动作
+        action = self.express_decision(active_segments, features)
+        
+        # 4. 执行并学习
+        result = self.execute_and_learn(action, state)
+        
+        return action, result
+```
+
+### 2. Training Process | 训练流程
+
+**English Version:**
+
+The training workflow:
+
+```
+1. Initialize basic gene chain
+   ↓
+2. Interact with environment and collect feedback
+   ↓
+3. Update gene expression weights based on feedback
+   ↓
+4. Periodically introduce mutations
+   ↓
+5. Evaluate performance and select excellent genes
+   ↓
+6. Deploy optimized gene chain
+```
+
+**Key Training Aspects:**
+- Continuous online learning without training resets
+- Real-time adaptation to environmental changes
+- Balanced exploration-exploitation through X-bases
+- Memory-based learning from historical patterns
+
+**中文版本:**
+
+训练工作流程：
+
+```
+1. 初始化基础基因链
+   ↓
+2. 与环境交互并收集反馈
+   ↓
+3. 基于反馈更新基因表达权重
+   ↓
+4. 定期引入变异
+   ↓
+5. 评估性能并筛选优秀基因
+   ↓
+6. 部署优化后的基因链
+```
+
+**关键训练方面:**
+- 无需重置训练的持续在线学习
+- 实时适应环境变化
+- 通过X碱基平衡探索与利用
+- 基于记忆的历史模式学习
+
+### 3. Performance Optimization | 性能优化
+
+**English Version:**
+
+Optimization strategies:
+
+**Caching Mechanism:**
+- High-frequency expression results are cached
+- Reduces repetitive computation for similar situations
+- Cache invalidation based on environmental changes
+
+**Segment Loading:**
+- Gene segments activated on demand
+- Reduces memory footprint
+- Improves response time for frequent patterns
+
+**Parallel Processing:**
+- Multiple gene segments can be evaluated concurrently
+- Speeds up decision-making in complex environments
+- Enables consideration of multiple strategies simultaneously
+
+**中文版本:**
+
+优化策略：
+
+**缓存机制:**
+- 高频表达结果被缓存
+- 减少类似情况的重复计算
+- 基于环境变化的缓存失效
+
+**分段加载:**
+- 按需激活基因段
+- 减少内存占用
+- 提高频繁模式的响应时间
+
+**并行处理:**
+- 可以并发评估多个基因段
+- 加速复杂环境中的决策
+- 允许同时考虑多种策略
+
+## Application Advantages | 应用优势
+
+**English Version:**
+
+1. **High Interpretability**: Each decision can be traced back to specific gene segments and base sequences, providing clear explanations for AI behavior.
+
+2. **Continuous Evolution**: The system adapts online to new environments without requiring training resets or complete retraining.
+
+3. **Controllable Resource Usage**: Memory and computational requirements grow predictably with gene chain length, enabling resource planning.
+
+4. **Creative Potential**: X-base and mutation mechanisms allow escape from local optima and discovery of novel strategies.
+
+5. **Biological Plausibility**: The system mimics real biological processes (gene expression, mutation, selection), providing insights for both AI and biology.
+
+**中文版本:**
+
+1. **解释性强**: 每个决策都可以追溯到具体的基因段和碱基序列，为AI行为提供清晰解释。
+
+2. **持续进化**: 系统在线适应新环境，无需重置训练或完全重新训练。
+
+3. **资源可控**: 内存和计算需求随基因链长度可预测地增长，便于资源规划。
+
+4. **创造潜力**: X碱基和变异机制允许逃离局部最优并发现新颖策略。
+
+5. **生物学合理性**: 系统模拟真实的生物过程(基因表达、突变、选择)，为AI和生物学提供见解。
+
+## Conclusion | 总结
+
+**English Version:**
+
+The GEDA system translates the core principles of genetic evolution—inheritance, mutation, natural selection, and gene expression—into a computational framework. Through its five-base "cipher" system, it generates and optimizes intelligent decisions in real-time. This approach is particularly suitable for scenarios requiring progressive learning, environmental adaptation, and explainable decision-making. The system's biological inspiration provides not only an effective AI mechanism but also a computational model for studying evolutionary processes.
+
+**中文版本:**
+
+GEDA系统将遗传进化的核心原理——遗传、突变、自然选择和基因表达——转化为计算框架。通过其五进制"暗号"系统，它实时生成和优化智能决策。这种方法特别适用于需要渐进学习、环境适应和可解释决策的场景。系统的生物学灵感不仅提供了有效的AI机制，也为研究进化过程提供了计算模型。
