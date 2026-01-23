@@ -92,10 +92,6 @@ pip install pyautogui pillow screeninfo
 python gade-main.py --game "YourGameName"
 快速开始 / Quick Start
 bash
-# 克隆项目
-git clone https://github.com/yourusername/gade.git
-cd gade
-
 # 安装依赖
 pip install -r requirements.txt
 
