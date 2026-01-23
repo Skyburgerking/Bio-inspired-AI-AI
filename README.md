@@ -1,265 +1,142 @@
-# Bio-inspired-AI (with original algorithm)
-探索生物启发的人工智能新范式。核心：基因表达决策算法(GEDA)、跨语言语音语义网络、联想记忆系统。目标是实现能持续进化、具备认知手感的智能体。with original algorithm
-🧬 Bio-inspired AI: GEDA Visual Snake
-🧬 生物启发AI：基因表达决策算法视觉贪吃蛇
-English | 中文
-A bio-inspired artificial intelligence project that simulates gene expression decision-making in a visual snake game. This project combines computational biology, genetic algorithms, and visual perception to create an adaptive AI agent.
+GADE - My Game Friend
+GADE - 我的游戏伙伴
+项目概述 / Project Overview
+GADE (Game Adaptive Digital Entity) 是一个仿生游戏伙伴智能体系统，采用六系统认知架构，模拟完整生物认知过程，实现与游戏环境的深度交互和自主进化。
 
-Author: Skyburgerking
+GADE (Game Adaptive Digital Entity) is a bionic game companion agent system that employs a six-system cognitive architecture to simulate complete biological cognitive processes, enabling deep interaction with game environments and autonomous evolution.
 
-🎮 Project Overview
-GEDA (Gene Expression Decision Algorithm) is an AI model inspired by biological gene expression and protein synthesis. The system uses a five-base genetic code to control decision-making in a classic Snake game, with real-time visual perception and environmental pressure sensing.
+系统架构 / System Architecture
+1. 记忆系统 (Memory System) ✅ 已完成
+文件: memory-brain.py
+功能: 游戏状态记忆与经验学习
 
-✨ Key Features
-Five-Base Genetic System:
+压缩存储与智能缓存
 
-A: Aggressive action (seeking food)
+游戏事件分类与语义网络
 
-G: Stable operation (maintaining safety)
+策略经验巩固
 
-C: Conservative strategy (avoiding risks)
+2. 视觉系统 (Vision System) ✅ 已完成
+文件: vision-eye.py
+功能: 游戏画面分析与识别
 
-T: Flexible adjustment (adaptive behavior)
+屏幕捕获与目标检测
 
-X: Exploratory mutation (creative exploration)
+游戏材料建模
 
-Visual Perception System:
+GEDA驱动的视觉决策
 
-Real-time gene expression map visualization
+3. 语言系统 (Language System) 🔄 开发中
+功能: 游戏文本理解与交流
 
-Environmental pressure heatmap
+双系统仿生架构
 
-Visual memory and cognitive mapping
+游戏术语学习
 
-Adaptive Decision-Making:
+GEDA驱动的语言适应
 
-Dynamic gene activation based on environmental pressure
+4. 决策系统 (Decision System) 🚧 待开发
+功能: 游戏策略生成
 
-A* pathfinding integrated with genetic decisions
+五进制决策碱基编码
 
-Memory-based learning from past experiences
+游戏环境压力感知
 
-Evolutionary Mechanics:
+策略进化与突变
 
-5 mutation types: insertion, replacement, deletion, reordering, complement
+5. 输出系统 (Output System) 🚧 待开发
+功能: 游戏行为执行
 
-Gene chain growth through successful decisions
+自然语言响应
 
-Natural selection simulated through gameplay
+游戏操作控制
 
-🚀 Getting Started
-Prerequisites
-Python 3.7+
+交互反馈管理
 
-Pygame library
+6. 发音系统 (Voice System) 🎵 设计完成
+功能: GEDA智能游戏音效
 
-Installation
+基因编码音色参数
+
+游戏音效进化合成
+
+环境音色自适应
+
+核心技术 / Core Technologies
+GEDA基因表达算法
+五进制碱基: A(激进)/G(稳定)/C(保守)/T(灵活)/X(突变)
+
+游戏环境压力: 根据游戏难度调整策略
+
+创造性突变: X碱基引入创新玩法
+
+谐音学习网络
+游戏语音学习: 发音层面的命令理解
+
+零样本适应: 新游戏术语快速学习
+
+发音进化算法
+虚拟声学参数: 游戏音效基因编码
+
+音色逼近: 目标游戏声音进化合成
+
+安装与运行 / Installation & Running
 bash
-# Clone the repository
-git clone https://github.com/Skyburgerking/Bio-inspired-AI.git
+# 基础依赖
+pip install numpy opencv-python msgpack lz4 scikit-learn
 
-# Navigate to project
-cd Bio-inspired-AI
+# 游戏交互组件
+pip install pyautogui pillow screeninfo
 
-# Install dependencies
-pip install pygame numpy
-Running the Game
+# 运行GADE系统
+python gade-main.py --game "YourGameName"
+快速开始 / Quick Start
 bash
-python geda_snake_game.py
-🧪 How It Works
-Gene Chain Initialization: The AI starts with a 50-base genetic chain containing different behavioral segments.
-
-Environmental Sensing: The system calculates pressure from hunger, space constraints, food proximity, and gene diversity.
-
-Gene Expression: Environmental pressure activates specific gene segments (aggressive, conservative, balanced).
-
-Decision Mapping: The active gene segment is mapped to movement decisions using:
-
-A* pathfinding for efficient food pursuit
-
-Safety evaluation for obstacle avoidance
-
-Exploratory behavior from X-bases
-
-Evolution & Learning:
-
-Successful decisions reinforce current genetic patterns
-
-Environmental stress triggers mutations
-
-Memory databases store successful gene expressions
-
-📊 Performance Metrics
-The game tracks multiple AI performance indicators:
-
-Decision success rate
-
-Environmental pressure levels
-
-Gene chain length and composition
-
-Mutation count and types
-
-Expression frequency
-
-🎯 Controls
-Space: Pause/Resume game
-
-R: Restart with next generation (evolution)
-
-Game runs autonomously - watch the AI learn!
-
-📈 Evolutionary Results
-Over multiple generations, the AI demonstrates:
-
-Increasing average scores through genetic optimization
-
-Adaptive gene composition changes based on environment
-
-Emergence of successful behavioral patterns
-
-Creative exploration breaking local optima
-
-🤝 Contributing
-This project is open for contributions! Areas for improvement:
-
-Enhanced genetic encoding schemes
-
-Additional environmental factors
-
-More sophisticated mutation mechanisms
-
-Performance optimization
-
-Extended visualization features
-
-
-中文
-🎮 项目概述
-GEDA（基因表达决策算法） 是一个受生物基因表达和蛋白质合成启发的AI模型。该系统使用五进制遗传密码来控制经典贪吃蛇游戏中的决策过程，具备实时视觉感知和环境压力感应能力。
-
-作者： Skyburgerking
-
-✨ 核心特性
-五进制遗传系统：
-
-A: 激进行动（积极寻找食物）
-
-G: 稳定操作（保持安全距离）
-
-C: 保守策略（规避风险）
-
-T: 灵活调整（适应性行为）
-
-X: 突变探索（创造性探索）
-
-视觉感知系统：
-
-实时基因表达地图可视化
-
-环境压力热力图
-
-视觉记忆与认知地图
-
-自适应决策：
-
-基于环境压力的动态基因激活
-
-A*寻路算法与遗传决策结合
-
-基于记忆的过往经验学习
-
-进化机制：
-
-5种变异类型：插入、替换、删除、重排、互补
-
-通过成功决策实现基因链自然生长
-
-通过游戏玩法模拟自然选择
-
-🚀 快速开始
-环境要求
-Python 3.7+
-
-Pygame 库
-
-安装
-bash
-# 克隆仓库
-git clone https://github.com/Skyburgerking/Bio-inspired-AI.git
-
-# 进入项目目录
-cd Bio-inspired-AI
+# 克隆项目
+git clone https://github.com/yourusername/gade.git
+cd gade
 
 # 安装依赖
-pip install pygame numpy
-运行游戏
-bash
-python geda_snake_game.py
-🧪 工作原理
-基因链初始化：AI从包含不同行为片段的50碱基基因链开始。
+pip install -r requirements.txt
 
-环境感知：系统计算来自饥饿、空间限制、食物接近度和基因多样性的压力。
+# 启动GADE伙伴
+python gade-main.py --mode companion --game "Minecraft"
+项目结构 / Project Structure
+text
+gade-game-friend/
+├── memory-brain.py          # 记忆系统
+├── vision-eye.py            # 视觉系统
+├── language-system.py       # 语言系统（开发中）
+├── decision-system.py       # 决策系统（待开发）
+├── output-system.py         # 输出系统（待开发）
+├── voice-system.py          # 发音系统（待开发）
+├── gade-main.py            # GADE主控制器
+├── config.py               # 游戏配置文件
+└── README.md              # 项目说明
+开发状态 / Development Status
+✅ 记忆系统：完整实现
 
-基因表达：环境压力激活特定基因片段（激进型、保守型、平衡型）。
+✅ 视觉系统：完整实现
 
-决策映射：通过以下方式将活跃基因片段映射为移动决策：
+🔄 语言系统：开发中
 
-使用A*算法高效寻找食物
+🚧 决策系统：待开发
 
-安全评估规避障碍
+🚧 输出系统：待开发
 
-X碱基带来的探索行为
+🎵 发音系统：设计完成，待开发
 
-进化与学习：
+应用场景 / Application Scenarios
+游戏陪伴: 智能游戏伙伴和助手
 
-成功决策强化当前遗传模式
+策略学习: 游戏策略自主进化
 
-环境压力触发基因突变
+语音交互: 自然游戏语音命令
 
-记忆数据库存储成功的基因表达
+游戏测试: 自主游戏测试与探索
 
-📊 性能指标
-游戏追踪多种AI性能指标：
+教育游戏: 自适应学习游戏伙伴
 
-决策成功率
+"GADE - 不只是游戏AI，而是你的进化型数字伙伴"
 
-环境压力水平
-
-基因链长度与组成
-
-突变次数与类型
-
-基因表达频率
-
-🎯 控制说明
-空格键：暂停/继续游戏
-
-R键：重启下一代（进化）
-
-游戏自主运行 - 观看AI学习过程！
-
-📈 进化结果
-经过多代进化，AI展现出：
-
-通过基因优化实现平均分数提升
-
-基于环境的适应性基因组成变化
-
-成功行为模式的涌现
-
-创造性探索突破局部最优
-
-🤝 贡献指南
-本项目开放贡献！可改进的领域包括：
-
-增强型遗传编码方案
-
-更多环境因素
-
-更复杂的突变机制
-
-性能优化
-
-扩展可视化功能
-
+"GADE - Not just a game AI, but your evolving digital companion"
